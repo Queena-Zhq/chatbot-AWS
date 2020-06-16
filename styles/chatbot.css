@@ -2,6 +2,11 @@ div#imgSub{
     padding-top: 3px;
     width: 30px;
 }
+button.responseCard{
+    display:block;
+    width: 100%;
+    margin-top: 5px;
+}
 input#wisdom {
     font-size: 1em;
     height: 30px;
@@ -19,8 +24,9 @@ p.userRequest {
 margin: 4px;
 padding: 4px 10px 4px 10px;
 border-radius: 4px;
+text-align: right;
 min-width: 50%;
-max-width: 85%;
+max-width: 80%;
 float: right;
 background-color: #7d7;
 }
@@ -29,7 +35,7 @@ p.lexResponse {
 margin: 4px;
 padding: 4px 10px 4px 10px;
 border-radius: 4px;
-text-align: right;
+text-align: left;
 min-width: 50%;
 max-width: 85%;
 float: left;
@@ -41,7 +47,7 @@ p.lexError {
 margin: 4px;
 padding: 4px 10px 4px 10px;
 border-radius: 4px;
-text-align: right;
+text-align: left;
 min-width: 50%;
 max-width: 85%;
 float: left;
