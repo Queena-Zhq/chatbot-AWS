@@ -2,23 +2,97 @@
 <html>
 
 <head>
+    <meta http-equiv="”Content-Type”" content="”text/html;" charset="utf-8">
     <title>Career Center</title>
     <link rel="stylesheet" href="styles/chatbot.css" />
     <link rel="icon" href="images/title.png" type="image/x-icon" />
     <script src="https://sdk.amazonaws.com/js/aws-sdk-2.41.0.min.js"></script>
 </head>
+
 <body>
-    <h1 style="text-align:  left">Career Center</h1>
-    <p style="width: 400px">
-        Welcome, try to talk to me :)
-    </p>
-    <div id="conversation" style="width: 400px; height: 500px; border: 1px solid #ccc; background-color: #eee; padding: 4px; overflow: scroll"></div>
-    <form id="chatform" style="margin-top: 10px" onsubmit="return pushChat();">
-        <div id="question">
-            <input type="text" id="wisdom" size="80" value="" placeholder="hello">
-            <img id = "imgSub" style="width:30px" src="images/submit.png"/>
+    <div style="height: 150px; width: auto; margin-left: 100px; margin-right: 100px; background-color: #f0ebf9;">
+        <img id="imgSchool" style="margin-left: 80px;height: 150px; float: left;" src="images/school.jpg" />
+        <h1 style="float: left; width: 65%; text-align: center; margin-top: 30px;">Careers Service Chatbot</h1>
+    </div>
+
+    <div style="margin-top: 20px;">
+        <div style="float: left; width: 40%; ">
+            <div id="conversation"
+                style="width: 400px; height: 500px; border: 1px solid #ccc; background-color: #eee; padding: 4px; overflow: scroll;margin-left: 100px">
+            </div>
+            <form id="chatform" style="margin-top: 10px; margin-left:100px" onsubmit="return pushChat();">
+                <div id="question">
+                    <input type="text" id="wisdom" size="80" value="" placeholder="hello">
+                    <img id="imgSub" style="width:30px" src="images/submit.png" />
+                </div>
+            </form>
         </div>
-    </form>
+        <div style="float: right; width: 55%; margin-right: 71px; height: 600px;">
+            <p style="margin-top: 0px; text-align: justify; margin-right: 30px; font-family: Times New Roman;
+            font-size: large;">This is User Guidance. This careers chatbot is aiming at providing online services for
+                students before they go to the Career Office. For start, you can type "Hello" to start a conversation,
+                or type "Help" directly for service options. You can also ask various questions about careers
+                yourselves. Sometimes the bot cannot understand your questions, you can try to change some of the
+                keywords, and I will also analyse the reasons. The following lists are the main services the bot
+                provides.</p>
+            <h3 class="contencH3">CV</h3>
+            <ul class="ulStyle">
+                <li>
+                    <h4 class="contentH4">CV Examples</h4>
+                </li>
+                <li>
+                    <h4 class="contentH4">CV Suggestions</h4>
+                </li>
+                <li>
+                    <h4 class="contentH4">CV Debugging</h4>
+                </li>
+            </ul>
+            <h3 class="contencH3">Interview</h3>
+            <ul class="ulStyle">
+                <li>
+                    <h4 class="contentH4">Interview Preparation</h4>
+                </li>
+                <li>
+                    <h4 class="contentH4">CInterview Skills</h4>
+                </li>
+
+            </ul>
+
+            <h3 class="contencH3">Event</h3>
+            <ul class="ulStyle">
+                <li>
+                    <h4 class="contentH4">Career Process</h4>
+                </li>
+                <li>
+                    <h4 class="contentH4">Career Resources</h4>
+                </li>
+                <li>
+                    <h4 class="contentH4">Career News</h4>
+                </li>
+            </ul>
+            <div class="connectLink">
+                <h4>Official Account</h4>
+                <div class="connectImage"><a href="https://www.facebook.com/yourcareersservice"
+                        target="_blank"><img
+                            src="https://pssweb.manchester.ac.uk/includes/images/icons/icon-facebook.png"
+                            title="Visit our Facebook account" alt="Facebook icon" /></a></div>
+                <div class="connectImage"><a href="https://twitter.com/ManUnicareers"
+                        target="_blank"><img
+                            src="https://pssweb.manchester.ac.uk/includes/images/icons/icon-twitter.png"
+                            title="Follow us on Twitter" alt="Twitter icon" /></a></div>
+                <div class="connectImage"><a href="http://manunicareersblog.com/" target="_blank"><img
+                            src="https://pssweb.manchester.ac.uk/includes/images/icons/icon-wordpress.png"
+                            title="Read our WordPress blogs" alt="WordPress icon" /></a></div>
+                <div><a href="https://www.weibo.com/UoMCareersService" target="_blank"><img
+                            src="https://pssweb.manchester.ac.uk/includes/images/icons/icon-weibo.png"
+                            title="Follow us on Weibo" alt="Weibo icon" /></a></div>
+            </div>
+        </div>
+    </div>
+
+
+
     <script src="scripts/chatbot.js"></script>
 </body>
+
 </html>

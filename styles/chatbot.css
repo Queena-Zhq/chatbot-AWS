@@ -15,11 +15,42 @@ input#wisdom {
     float: left;
     margin-right: 8px;
 }
+div.feedback{
+    font-style: initial;
+    text-align: center;
+    float: left;
+    margin-right: 10px;
+    height: 20px;
+    background-color:#ded3d3;
+    width: 15%;
+}
+
+div.feedback:hover{
+    background-color:#e7f50e;
+}
+div.connectLink{
+    height: 50px;
+}
+div.connectImage{
+    float:left;
+    margin-right:8px;
+}
 input::placeholder {
 color: #ccc;
 font-style: italic;
 }
-
+h3.contencH3{
+    margin-bottom: 0px;
+    margin-top: 10px;
+}
+h4.contentH4{
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+ul.ulStyle{
+    padding-left: 20px;
+    margin-top: 0px;
+}
 p.userRequest {
 margin: 4px;
 padding: 4px 10px 4px 10px;
@@ -30,7 +61,17 @@ max-width: 80%;
 float: right;
 background-color: #7d7;
 }
-
+p.lexFeedback{
+    background-color: darksalmon;
+    font-style: inherit;
+    margin: 4px;
+    padding: 4px 10px 4px 10px;
+    border-radius: 4px;
+    text-align: left;
+    min-width: 50%;
+    max-width: 85%;
+    float: left;
+}
 p.lexResponse {
 margin: 4px;
 padding: 4px 10px 4px 10px;
@@ -39,8 +80,8 @@ text-align: left;
 min-width: 50%;
 max-width: 85%;
 float: left;
-background-color: #bbf;
-font-style: italic;
+background-color:bisque;
+font-style: inherit;
 }
 
 p.lexError {
