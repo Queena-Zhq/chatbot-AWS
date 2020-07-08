@@ -89,27 +89,30 @@ function showfeedback(data){
     var responsePara = document.createElement("P");
     var my_score1 = "0";
     var my_score2 = "0";
-    responsePara.className = 'lexFeedback';
+    responsePara.className = 'container lexFeedback';
     my_message = data.message;
     responsePara.appendChild(document.createTextNode(my_message));
     var my_line = document.createElement("HR");
     my_line.setAttribute("size",3);
+    my_line.className = 'row'
+    my_line.setAttribute("style","margin-top:0px;margin-bottom:0px;");
     my_line.setAttribute("background-color","black");
     responsePara.appendChild(my_line);
 
-    var question1 = "The usability of services:";
+    var question1 = "1. The usability of services: ";
     var div1 = document.createElement("div");
     div1.innerHTML = question1;
-    div1.setAttribute("style","font-style: initial;");
+    div1.setAttribute("style","font-style: initial; width:100%; margin-left:1%;");
+    div1.className = 'row'
     responsePara.appendChild(div1);
 
     var divq1 = document.createElement("div");
-    divq1.setAttribute("style","width:350px");
+    divq1.setAttribute("style","width:100%;margin-left:1%;");
     divq1.setAttribute("id","divq1");
-
+    divq1.className = 'row'
     var div11 = document.createElement("div");
     div11.innerHTML = "1";
-    div11.className = 'feedback';
+    div11.className = 'col-md-2 feedback';
     div11.setAttribute("id","div11");
     div11.onclick = function (e){
         if (my_score1 == "0"){
@@ -126,7 +129,7 @@ function showfeedback(data){
     divq1.appendChild(div11);
     var div12 = document.createElement("div");
     div12.innerHTML = "2";
-    div12.className = 'feedback';
+    div12.className = 'col-md-2 feedback';
     div12.setAttribute("id","div12");
     div12.onclick = function (e){
         if (my_score1 == "0"){
@@ -142,7 +145,7 @@ function showfeedback(data){
     divq1.appendChild(div12);
     var div13 = document.createElement("div");
     div13.innerHTML = "3";
-    div13.className = 'feedback';
+    div13.className = 'col-md-2 feedback';
     div13.setAttribute("id","div13");
     div13.onclick = function (e){
         if (my_score1 == "0"){
@@ -158,7 +161,7 @@ function showfeedback(data){
     divq1.appendChild(div13);
     var div14 = document.createElement("div");
     div14.innerHTML = "4";
-    div14.className = 'feedback';
+    div14.className = 'col-md-2 feedback';
     div14.setAttribute("id","div14");
     div14.onclick = function (e){
         if (my_score1 == "0"){
@@ -174,7 +177,7 @@ function showfeedback(data){
     divq1.appendChild(div14);
     var div15 = document.createElement("div");
     div15.innerHTML = "5";
-    div15.className = 'feedback';
+    div15.className = 'col-md-2 feedback';
     div15.setAttribute("id","div15");
     div15.onclick = function (e){
         if (my_score1 == "0"){
@@ -190,17 +193,18 @@ function showfeedback(data){
     divq1.appendChild(div15);
     responsePara.appendChild(divq1);
     
-    var question2 = "The average satisfaction of all answers:";
+    var question2 = "2. The average satisfaction of all answers: ";
     var div2 = document.createElement("div");
     div2.innerHTML = question2;
-    div2.setAttribute("style","font-style: initial;");
+    div2.setAttribute("style","font-style: initial;margin-left:1%;");
+    div2.className = 'row'
     responsePara.appendChild(div2);
     var divq2 = document.createElement("div");
-    divq2.setAttribute("style","width:350px");
-
+    divq2.setAttribute("style","width:100%;margin-left:1%;");
+    divq2.className = 'row'
     var div21 = document.createElement("div");
     div21.innerHTML = "1";
-    div21.className = "feedback";
+    div21.className = 'col-md-2 feedback';
     div21.setAttribute("id","div21");
     div21.onclick = function (e){
         if (my_score2 == "0"){
@@ -217,7 +221,7 @@ function showfeedback(data){
 
     var div22 = document.createElement("div");
     div22.innerHTML = "2";
-    div22.className = "feedback";
+    div22.className = 'col-md-2 feedback';
     div22.setAttribute("id","div22");
     div22.onclick = function (e){
         if (my_score2 == "0"){
@@ -234,7 +238,7 @@ function showfeedback(data){
 
     var div23 = document.createElement("div");
     div23.innerHTML = "3";
-    div23.className = "feedback";
+    div23.className = 'col-md-2 feedback';
     div23.setAttribute("id","div23");
     div23.onclick = function (e){
         if (my_score2 == "0"){
@@ -251,7 +255,7 @@ function showfeedback(data){
 
     var div24 = document.createElement("div");
     div24.innerHTML = "4";
-    div24.className = "feedback";
+    div24.className = 'col-md-2 feedback';
     div24.setAttribute("id","div24");
     div24.onclick = function (e){
         if (my_score2 == "0"){
@@ -268,7 +272,7 @@ function showfeedback(data){
 
     var div25 = document.createElement("div");
     div25.innerHTML = "5";
-    div25.className = "feedback";
+    div25.className = 'col-md-2 feedback';
     div25.setAttribute("id","div25");
     div25.onclick = function (e){
         if (my_score2 == "0"){
@@ -288,7 +292,8 @@ function showfeedback(data){
     // create a submit button
     var submit = document.createElement("button");
     submit.innerHTML = "Submit";
-    submit.setAttribute("style","margin-top:10px");
+    submit.setAttribute("style","margin-top:1%;margin-left:1%");
+    submit.className = 'row'
     submit.onclick = function(e){
         var params = {
             botAlias: '$LATEST',
@@ -398,7 +403,6 @@ function showResponse(lexResponse) {
         // get the responseCard title and Value for showing
         var cardTitle = lexResponse.responseCard.genericAttachments[0].title;
         var cardValue = lexResponse.responseCard.genericAttachments[0].buttons;
-
         var titleP = document.createElement("P");
         titleP.innerHTML = cardTitle;
         cardParam.appendChild(titleP);
@@ -455,6 +459,7 @@ function showResponse(lexResponse) {
         console.log(data);
         var selectCV = document.createElement("select");
         selectCV.setAttribute("id","myselect");
+        selectCV.setAttribute("style","width:100%;");
         option_len = data['cv'];
 
         keys = Object.keys(data);
